@@ -13,3 +13,9 @@
     cursor: pointer;
     color: white;
 }
+
+@media screen and (max-width: 900px) {
+    .header__exit {
+        color: #A9A9A9;
+    }
+  }

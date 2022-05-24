@@ -4,3 +4,9 @@
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 900px) {
+    .register {
+        padding: 30px;
+    }
+  }

@@ -6,3 +6,10 @@
     line-height: 22px;
     text-decoration: none;
 }
+
+@media screen and (max-width: 900px) {
+    .header__login-link {
+        font-size: 14px;
+        line-height: 17px;
+    }
+  }

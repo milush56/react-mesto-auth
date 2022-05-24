@@ -14,5 +14,6 @@
     padding-top: 28px;
     padding-bottom: 27px;
     padding-right: 27px;
+    flex-direction: column;
   }
 }

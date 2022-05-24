@@ -9,3 +9,10 @@
     font-size: 18px;
     line-height: 22px;
 }
+
+@media screen and (max-width: 900px) {
+    .header__email {
+        padding-right: 0;
+        padding-bottom: 18px;
+    }
+  }
