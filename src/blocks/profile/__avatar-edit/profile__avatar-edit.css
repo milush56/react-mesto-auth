@@ -1,0 +1,16 @@
+.profile__avatar-edit {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+
+.profile__avatar-edit:hover {
+  transition: all 0.4s;
+  opacity: 1;
+  
+}

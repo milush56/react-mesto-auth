@@ -1,0 +1,15 @@
+.login__item {
+    border: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #CCCCCC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0;
+    padding-bottom: 10px;
+    background-color: black;
+    margin-top: 30px;
+    color: white;
+}

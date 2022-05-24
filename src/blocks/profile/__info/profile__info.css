@@ -1,0 +1,24 @@
+.profile__info {
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 120px 1fr 24px;
+  grid-template-rows: 70px 50px;
+  grid-column-gap: 20px;
+  grid-template-areas:
+  "avatar title edit-button"
+  "avatar subtitle subtitle";
+}
+
+@media screen and (max-width: 700px) {
+  .profile__info {
+    max-width: 282px;
+    grid-template-columns: 225px 1fr;
+    grid-template-rows: 132px 44px 1fr;
+    grid-column-gap: 6px;
+    justify-items: center;
+    grid-template-areas:
+    "avatar avatar"
+    "title edit-button" 
+    "subtitle subtitle";
+  }
+}

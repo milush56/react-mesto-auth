@@ -1,0 +1,6 @@
+.element {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
