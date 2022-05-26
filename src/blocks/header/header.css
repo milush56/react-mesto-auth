@@ -6,14 +6,14 @@
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
   display: flex;
   justify-content: space-between;
+  padding-left: 27px;
+  padding-right: 27px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   .header {
-    padding-left: 27px;
     padding-top: 28px;
     padding-bottom: 27px;
-    padding-right: 27px;
     flex-direction: column;
   }
 }

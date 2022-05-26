@@ -1,15 +1,16 @@
 .header__reg-link {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-width: 900px) {
-    .header__reg-link {
-        font-size: 14px;
-        line-height: 17px;
-    }
+  .header__reg-link {
+    font-size: 14px;
+    line-height: 17px;
   }
+}

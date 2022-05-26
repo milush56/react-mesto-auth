@@ -5,9 +5,10 @@
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
+    color: white;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
     .header__login-link {
         font-size: 14px;
         line-height: 17px;
