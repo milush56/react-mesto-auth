@@ -87,7 +87,7 @@ function App() {
       .editProfile(name, about)
       .then((res) => {
         console.log(res);
-        setСurrentUser(res);
+        setСurrentUser(res.data);
         closeAllPopups();
       })
 
@@ -106,7 +106,7 @@ function App() {
       .editAvatar(avatar)
       .then((res) => {
         console.log(res);
-        setСurrentUser(res);
+        setСurrentUser(res.data);
         closeAllPopups();
       })
 
@@ -139,7 +139,7 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some((i) => i === currentUser._id);
 
     if (!isLiked) {
       api
@@ -200,14 +200,14 @@ function App() {
           setRegMessage("Вы успешно зарегистрировались!");
           setIsInfoTooltipOpen(true);
           history.push("/sign-in");
-        } 
+        }
       })
       .catch((err) => {
         console.log(err);
-          setAccess(false);
-          /* setRegMessage(`${err.message}`); */ /* не смог найти куда дропается месага с ошибкой, вписал с макета */
-          setRegMessage("Что-то пошло не так! Попробуйте ещё раз."); 
-          setIsInfoTooltipOpen(true);
+        setAccess(false);
+        /* setRegMessage(`${err.message}`); */ /* не смог найти куда дропается месага с ошибкой, вписал с макета */
+        setRegMessage("Что-то пошло не так! Попробуйте ещё раз.");
+        setIsInfoTooltipOpen(true);
       });
   }
 
@@ -271,7 +271,7 @@ function App() {
       api
         .getProfile()
         .then((res) => {
-          setСurrentUser(res);
+          setСurrentUser(res.data);
         })
 
         .catch((err) => {
@@ -279,7 +279,6 @@ function App() {
         });
     }
   }, [loggedIn]);
-
   useEffect(() => {
     const close = (e) => {
       if (e.keyCode === 27) {
@@ -305,6 +304,7 @@ function App() {
       api
         .getInitialCards()
         .then((cardList) => {
+          console.log(cardList);
           setCards(cardList);
         })
 
