@@ -226,7 +226,6 @@ function App() {
       .catch((err) => {
         console.log(err);
         setAccess(false);
-        /* setRegMessage(`${res.error}`); */ /* не смог найти куда дропается месага с ошибкой, вписал с макета */
         setRegMessage("Что-то пошло не так! Попробуйте ещё раз.");
         setIsInfoTooltipOpen(true);
       });
