@@ -12,7 +12,7 @@ function InfoTooltip({ isOpen, onClose, message, access }) {
           className="info-popup__close popup__close"
           onClick={onClose}
         />
-        <img className="info-popup__image" src={`${access ? done : repeat}`} />
+        <img className="info-popup__image" alt={`${message}`} src={`${access ? done : repeat}`} />
         <h2 className="info-popup__title">{message}</h2>
       </div>
     </div>

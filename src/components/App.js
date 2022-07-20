@@ -85,9 +85,9 @@ function App() {
     setButtonText(true);
     api
       .editProfile(name, about)
-      .then((res) => {
-        console.log(res);
-        setСurrentUser(res.data);
+      .then((data) => {
+        console.log(data);
+        setСurrentUser(data);
         closeAllPopups();
       })
 
@@ -195,7 +195,8 @@ function App() {
     return auth
       .register(email, password)
       .then((res) => {
-        if (res.data) {
+        console.log(res);
+        if (res) {
           setAccess(true);
           setRegMessage("Вы успешно зарегистрировались!");
           setIsInfoTooltipOpen(true);
@@ -205,7 +206,6 @@ function App() {
       .catch((err) => {
         console.log(err);
         setAccess(false);
-        /* setRegMessage(`${err.message}`); */ /* не смог найти куда дропается месага с ошибкой, вписал с макета */
         setRegMessage("Что-то пошло не так! Попробуйте ещё раз.");
         setIsInfoTooltipOpen(true);
       });
@@ -245,7 +245,7 @@ function App() {
         .then((res) => {
           if (res) {
             setLoggedIn(true);
-            setEmail(`${res.data.email}`);
+            setEmail(`${res.email}`);
           }
         })
         .catch((err) => {
@@ -260,17 +260,16 @@ function App() {
 
   useEffect(() => {
     if (loggedIn) {
-      console.log(loggedIn);
       history.push("/");
     }
-  }, [loggedIn]);
+  });
 
   useEffect(() => {
     if (loggedIn) {
       api
         .getProfile()
         .then((res) => {
-          setСurrentUser(res.data);
+          setСurrentUser(res);
         })
 
         .catch((err) => {
@@ -304,7 +303,7 @@ function App() {
         .getInitialCards()
         .then((cardList) => {
           console.log(cardList);
-          setCards(cardList);
+          setCards(cardList.reverse());
         })
 
         .catch((err) => {
