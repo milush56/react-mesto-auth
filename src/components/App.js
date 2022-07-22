@@ -102,6 +102,7 @@ function App() {
 
   function handleUpdateAvatar(avatar) {
     setButtonText(true);
+    /* let token = localStorage.getItem("jwt"); */
     api
       .editAvatar(avatar)
       .then((res) => {
@@ -121,6 +122,7 @@ function App() {
 
   function handleUpdatePlace(name, link) {
     setButtonText(true);
+    /* let token = localStorage.getItem("jwt"); */
     api
       .addCardMesto(name, link)
       .then((res) => {
@@ -266,6 +268,7 @@ function App() {
 
   useEffect(() => {
     if (loggedIn) {
+      /* let token = localStorage.getItem("jwt"); */
       api
         .getProfile()
         .then((res) => {
@@ -299,6 +302,7 @@ function App() {
 
   useEffect(() => {
     if (loggedIn) {
+      /* let token = localStorage.getItem("jwt"); */
       api
         .getInitialCards()
         .then((cardList) => {
